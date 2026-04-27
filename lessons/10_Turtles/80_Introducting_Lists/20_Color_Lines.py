@@ -18,7 +18,7 @@ angle=360/sides
 
 for color in colors:                            # loop through the colors
     tina.color(color) # Your code here
-    tina.forward(0.80)
+    tina.forward(0.75)
     tina.right(angle)
 
 # 2) Make another square, but put the colors in reverse order, using a negative index. 

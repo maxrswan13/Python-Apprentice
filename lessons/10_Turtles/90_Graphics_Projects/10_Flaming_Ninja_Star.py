@@ -31,16 +31,16 @@ t.shape("turtle")
 
 t.width(2) 
 
-t.speed(0) 
+t.speed(00) 
 
-for i in range(25):
+for i in range(7200):
     t.pencolor(getRandomColor())
 
     t.fillcolor(getRandomColor()) 
    
     t.begin_fill()
 
-    t.forward(64) 
+    t.forward(20) 
 
     t.left(40) 
 
@@ -50,7 +50,7 @@ for i in range(25):
 
     t.forward(flameSize) 
 
-    t.right(62) 
+    t.right(1) 
 
     t.forward(baseSize) 
 
