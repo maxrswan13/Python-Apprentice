@@ -47,7 +47,7 @@ tina.goto(-50, -150)
 tina.forward(20)                        # Move tina forward by 20
 tina.left(90)                           # Turn tina left by 90 degrees
 tina.forward(20)                        # Move tina forward by 20
-tina.write("How are you doing today?")         # Write the message "Why, hello there!"
+tina.write("RAHHHH RAHHHHH RAHHHHH RAHHHHHHH RRRAAAHHH RAAHHHHHH!!!!!")         # Write the message "Why, hello there!"
 tina.backward(20)                       # Move tina backward by 20
 
 turtle.exitonclick() # Use tina.forward() and tina.left() to draw a triangle

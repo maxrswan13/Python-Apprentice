@@ -25,7 +25,7 @@ def set_background_image(window, image_name):
 import turtle# Set up the screen                           # Tell Python we want to work with the turtle
 turtle.setup(600, 600,0,0)     # Set the size of the window
 
- 
+tina = turtle.Turtle()  
                 # Create a turtle named tina
 screen = turtle.Screen()                # Get the screen that tina is on
 set_background_image(screen, "emoji.png") # Set the background image of the screen
@@ -51,11 +51,8 @@ def turtle_clicked(t, x, y):
     print('turtle clicked!')
     
     for i in range(0,360, 20):
-        t.goto(x,y)
+        t.tilt(20)
 
-set_turtle_image(t,"moustache1.gif")
+t.onclick(lambda x, y, t=t: turtle_clicked(t, x, y))
 
-screen.onclick(lambda x, y, t=t: turtle_clicked(t, x, y))
-
-turtle.done()
-
+turtle.exitonclick()
