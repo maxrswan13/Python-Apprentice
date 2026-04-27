@@ -12,7 +12,6 @@ Hint: See 08a_More Turtle Programs, section 'Change the Background Image' and
 
 #... # Your code here
 
-
 import turtle
 
 def set_background_image(window, image_name):
@@ -26,17 +25,29 @@ def set_background_image(window, image_name):
 
     image = Image.open(image_path)
     
-    window.setup(image.width, image.height, startx=-10, starty=10)
+    window.setup(image.width, image.height, startx=10, starty=10)
     window.bgpic(image_path)
 
-# Set up the screen
-import turtle                           # Tell Python we want to work with the turtle
+import turtle# Set up the screen                           # Tell Python we want to work with the turtle
 turtle.setup(600, 600,0,0)     # Set the size of the window
 
-tina = turtle.Turtle()                  # Create a turtle named tina
-
+tina = turtle.Turtle()  
+                # Create a turtle named tina
 screen = turtle.Screen()                # Get the screen that tina is on
-set_background_image(screen, "sanic_64.png") # Set the background image of the screen
+set_background_image(screen, "emoji.png") # Set the background image of the screen
+
+def set_turtle_image(tt, image_name):
+    """Set the turtle's shape to a custom image."""
+
+    from pathlib import Path
+    image_dir = Path(__file__).parent.parent / "images"
+    image_path = str(image_dir / image_name)
+
+    screen = turtle.getscreen()
+    screen.addshape(image_path)
+    tt.shape(image_path)
+
+set_turtle_image(tina,"moustache1.gif")
 
 turtle.exitonclick()
 
